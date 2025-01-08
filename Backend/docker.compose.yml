@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    restart: always
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_PASSWORD=Secret3
+      - POSTGRES_USER=moviesadmin
+      - POSTGRES_DB=moviesdb
